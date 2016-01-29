@@ -20,6 +20,8 @@ import javax.swing.JSpinner;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import javax.swing.JMenuItem;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Main extends JFrame {
 
@@ -157,6 +159,10 @@ public class Main extends JFrame {
 		txtMolofssongmailcom.setColumns(10);
 		
 		JButton btnSpara = new JButton("Spara");
+		btnSpara.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnSpara.setBounds(517, 292, 117, 29);
 		contentPane.add(btnSpara);
 		

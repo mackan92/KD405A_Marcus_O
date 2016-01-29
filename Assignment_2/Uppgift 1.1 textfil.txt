@@ -1,0 +1,19 @@
+Uppgift 1.1
+
+
+a)	public House(int yearBuilt,int size){ //diverse kod    	//Konstruktor
+
+b) 	private int yearBuilt;  					//Instansvariabler 	private int size;
+c)	public int getYearBuilt(){ 					//Instansmetoder
+	//diverse kod } 
+	public int getSize(){ //diverse kod 
+	} }
+d)	minSize är deklarerad final. Det innebär att den inte kan bli ändrad eller 			överskriden. 
+e)	Med private så kan endast en variabel nås inifrån, medan public kan nås utifrån.
+f)	House
+	-yearBuilt int
+	-size int
+	-minSize int
+	+ House(yearBuilt, size);
+	+getYearBuilt();
+	+getSize();
