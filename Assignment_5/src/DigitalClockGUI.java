@@ -119,7 +119,7 @@ public class DigitalClockGUI extends JFrame {
 		btnClearAlarm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				clockLogic.clearAlarm();
-				alarmLabel.setText("Alarm set at: ");
+				alarmLabel.setText("");
 				hourField.setText("");
 				minuteField.setText("");
 			}
