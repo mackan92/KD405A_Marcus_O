@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
+import javax.swing.ImageIcon;
 
 public class SearchGUI extends JFrame {
 
@@ -38,6 +39,7 @@ public class SearchGUI extends JFrame {
 	private JButton travelButton;
 	private JScrollPane scrollPane_1;
 	private JTextArea travelArea;
+	private JLabel lblNewLabel;
 
 	/**
 	 * Launch the application.
@@ -61,6 +63,7 @@ public class SearchGUI extends JFrame {
 	 * Create the frame.
 	 */
 	public SearchGUI() {
+		setTitle("Skånetrafiken");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 497, 418);
 		contentPane = new JPanel();
@@ -78,7 +81,7 @@ public class SearchGUI extends JFrame {
 		contentPane.add(lblSkHllplats);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(27, 89, 331, 95);
+		scrollPane.setBounds(27, 89, 449, 95);
 		contentPane.add(scrollPane);
 		
 		searchArea = new JTextArea();
@@ -132,6 +135,11 @@ public class SearchGUI extends JFrame {
 		travelArea = new JTextArea();
 		scrollPane_1.setViewportView(travelArea);
 		
+		lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon("/Users/Marcus/Documents/Programmering 2/KD405A_Marcus_O/A6_Marcus_O/src/se/mah/k3lara/skaneAPI/view/logo_skanetrafiken.png"));
+		lblNewLabel.setBounds(274, 13, 205, 42);
+		contentPane.add(lblNewLabel);
+		
 		
 	}
 	
@@ -152,6 +160,7 @@ public class SearchGUI extends JFrame {
 	public class journeyThread extends Thread {
 		 @Override
 		public void run() {
+			 
 			 String searchURL = Constants.getURL(departureField.getText(),destinationField.getText(),1);
 				Journeys journeys = Parser.getJourneys(searchURL);
 				for (Journey journey : journeys.getJourneys()) {

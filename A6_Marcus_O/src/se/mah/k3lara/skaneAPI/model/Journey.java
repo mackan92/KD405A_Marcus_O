@@ -1,6 +1,7 @@
 package se.mah.k3lara.skaneAPI.model;
 
 import java.util.Calendar;
+import java.text.DecimalFormat;
 /**
  * A Journey has a start and an endstation. Stations between start and stop are not implemented in this version
  * @author K3LARA
@@ -23,7 +24,11 @@ public class Journey {
 	public Journey(Station startStation, Station endStation) {
 		this.startStation = startStation;
 		this.endStation = endStation;
+		
 	}
+	
+	DecimalFormat timeFormat = new DecimalFormat("00");
+	
 	public Calendar getDepDateTime() {
 		return depDateTime;
 	}

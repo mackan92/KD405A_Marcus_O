@@ -12,9 +12,10 @@ import se.mah.k3lara.skaneAPI.model.Station;
 import se.mah.k3lara.skaneAPI.xmlparser.Parser;
 
 public class TestClass {
+	
 
 	public static void main(String[] args) {
-		//Hämtar de olika destinationerna.
+		//Hämtar de angivna destinationerna.
 		String searchURL = Constants.getURL("80000","81216",20); //Malmö C = 80000,  Lund C, 81216 Malmö Gatorg 80100, Hässleholm C 93070
 		System.out.println(searchURL);
 		System.out.println("// Results when searching:");
@@ -29,9 +30,9 @@ public class TestClass {
 		} 
 		
 	   System.out.println("// Stations when searching for stations containing \"Malm\"");
-	   //Skriver ut en Arraylist över de stationer man har sökt på.
+	   //Skriver ut en lista över de stationer man har sökt på.
 		ArrayList<Station> searchStations = new ArrayList<Station>(); 
-		//Skriver ut vilka koder det är för de olika stationerna i Malmö.
+		//Skriver ut vilka koder det är för de olika stationer som innehåller "Malm".
 		searchStations.addAll(Parser.getStationsFromURL("Malm"));
 		for (Station s: searchStations){
 			System.out.println(s.getStationName() +" number:" +s.getStationNbr());
