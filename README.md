@@ -1,3 +1,3 @@
 # KD405A_Marcus_O
 Programmering 2
-![Hej](KD405A_Marcus_O/applelogga.jpg)
+![Hej](https://github.com/mackan92/KD405A_Marcus_O/blob/master/applelogga.jpg?raw=true)
